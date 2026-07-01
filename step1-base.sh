@@ -1,5 +1,5 @@
 #!/bin/sh
-set -e
+
 
 echo "=== Step 1: Base System ==="
 setup-apkrepos -c
