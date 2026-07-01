@@ -1,13 +1,18 @@
 #!/bin/sh
 
+set -e
 
-echo "=== Step 3: User Setup ==="
+echo "=== Step 3: Session Setup ==="
 
-adduser -D robert
-passwd robert
+# Wayfire session file (important!)
+mkdir -p /usr/share/wayland-sessions
 
-echo "permit robert" > /etc/doas.d/doas.conf
+cat <<EOF >/usr/share/wayland-sessions/wayfire.desktop
+[Desktop Entry]
+Name=Wayfire
+Comment=Wayland Compositor
+Exec=dbus-run-session wayfire
+Type=Application
+EOF
 
-# Auto start X on login
-echo "if [ -z \$DISPLAY ] && [ \$TTY = /dev/tty1 ]; then exec startx; fi" >> /home/robert/.profile
-chown robert:robert /home/robert/.profile
+echo "=== Session ready ==="
