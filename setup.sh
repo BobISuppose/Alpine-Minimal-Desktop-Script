@@ -1,6 +1,9 @@
 #!/bin/sh
 set -e
 
+SCRIPT_DIR="$(dirname "$0")"
+cd "$SCRIPT_DIR"
+
 echo "=== Alpine Minimal Desktop Setup ==="
 
 ./step1-base.sh
