@@ -1,5 +1,5 @@
 #!/bin/sh
-set -e
+
 
 echo "=== Step 3: User Setup ==="
 
