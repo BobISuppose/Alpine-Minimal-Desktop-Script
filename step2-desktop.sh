@@ -1,24 +1,21 @@
 #!/bin/sh
 
 
-echo "=== Step 2: Desktop Environment ==="
+echo "=== Step 2: Wayfire Desktop ==="
 
-# Wayland stack (Wayfire)
 apk add \
     wayfire \
     waybar \
-    wlogout \
-    wlr-randr \
     wf-shell \
     foot \
-    grim slurp \
+    wlogout \
+    wlr-randr \
+    grim \
+    slurp \
     swaybg \
     swaylock \
-    swayidle
+    swayidle \
+    xwayland \
+    dbus-x11
 
-# Basic fonts
-apk add \
-    font-dejavu \
-    font-noto \
-    font-noto-emoji
-
+echo "=== Wayfire installed ==="
