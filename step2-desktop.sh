@@ -1,5 +1,5 @@
 #!/bin/sh
-set -e
+
 
 echo "=== Step 2: Desktop Environment ==="
 
