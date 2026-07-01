@@ -27,8 +27,11 @@ apk add \
     xdg-utils \
     xdg-desktop-portal \
     xdg-desktop-portal-wlr
+    greetd \
+    tuigreet \
 
 rc-update add dbus
 rc-update add seatd
 rc-update add wireplumber
 rc-update add pipewire
+rc-update add greetd
