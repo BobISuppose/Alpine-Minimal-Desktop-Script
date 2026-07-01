@@ -32,7 +32,12 @@ Clone the repository:
 git clone https://github.com/BobISuppose/Alpine-Minimal-Desktop-Script
 
 Enter the project directory: cd Alpine-Minimal-Desktop-Script
-Make scripts executable: chmod +x setup.sh
+Make scripts executable: 
+chmod +x setup.sh
+chmod +x step1-base.sh
+chmod +x step2-desktop.sh
+chmod +x step3-user.sh
+
 Run the installer: ./setup.sh
 
 Requirements
