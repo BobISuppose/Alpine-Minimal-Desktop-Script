@@ -1,37 +1,28 @@
 #!/bin/sh
 
-
 echo "=== Step 1: Base System ==="
-setup-apkrepos -c
-apk update
-apk upgrade
 
-# Core tools & Base system, networking, git, audio, notifications.
+apk update
+
 apk add \
+    dbus \
+    seatd \
+    elogind \
+    udev \
+    bash \
     git \
     curl \
     wget \
-    doas \
-    bash \
-    dbus \
-    udev \
-    eudev \
-    seatd \
-    elogind \
-    alsa-utils \
-    pipewire \
-    pipewire-alsa \
-    pipewire-pulse \
-    wireplumber \
-    dunst \
     xdg-utils \
-    xdg-desktop-portal \
-    xdg-desktop-portal-wlr
-    greetd \
-    tuigreet \
+    font-dejavu \
+    font-noto \
+    font-noto-emoji \
+    mesa-dri-gallium \
+    mesa-utils
 
+# Enable essential services
 rc-update add dbus
 rc-update add seatd
-rc-update add wireplumber
-rc-update add pipewire
-rc-update add greetd
+rc-update add elogind
+
+echo "=== Base system done ==="
