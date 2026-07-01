@@ -45,18 +45,17 @@ Requirements
 Project Structure: 
 
 Alpine-Minimal-Desktop-Script/
-│
 ├── setup.sh
-│   └── Main installation script
+│   Main installation script
 │
 ├── step1-base.sh
-│   └── Core system packages and services
+│   Core system packages and services
 │
 ├── step2-desktop.sh
-│   └── X11 / Wayland desktop packages
+│   X11 / Wayland desktop packages
 │
 └── step3-user.sh
-    └── User configuration and desktop setup
+    User configuration and desktop setup
 
 How It Works
 
